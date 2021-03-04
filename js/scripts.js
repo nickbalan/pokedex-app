@@ -28,10 +28,6 @@ document.write(doubleSize + addSpace);
 
 /* The result of doubling of the doubleSize variable and substracting half of the value of the original size variable*/
 let minSize = (doubleSize * 2) - (size * 2);
-document.write(minSize+addSpace);
+document.write(minSize);
 
-let escapedtext1 = "This code displays \"quotes\"";
-document.write(escapedtext1+addSpace);
 
-let escapedtext2 = 'This code displays \\backslash\\ and "quotes"';
-document.write(escapedtext2+addSpace);
