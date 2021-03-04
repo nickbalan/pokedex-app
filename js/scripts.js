@@ -30,4 +30,9 @@ document.write(doubleSize + addSpace);
 let minSize = (doubleSize * 2) - (size * 2);
 document.write(minSize);
 
+let escapedtext1 = "This code displays \"quotes\"";
+document.write(escapedtext1+addSpace);
+
+let escapedtext2 = 'This code displays \\backslash\\ and "quotes"';
+document.write(escapedtext2+addSpace);
 
