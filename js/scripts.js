@@ -37,3 +37,12 @@ document.write(escapedtext1+addSpace);
 /* Displays a text with backslash*/
 let escapedtext2 = 'This code displays \\backslash\\ and "quotes"';
 document.write(escapedtext2+addSpace);
+
+/* Displays a template literal form */
+let name = 'Nick';
+let age = 31;
+let message = `Hello!
+This is my first message here.
+My name is: ${name},
+and I'm ${age}.`;
+document.write(message+addSpace);
