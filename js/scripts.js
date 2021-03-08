@@ -52,3 +52,14 @@ let car = {
 	color: 'red',
 	mileage: 10
 };
+
+/* Adds object with another object nested inside it */
+let annesAge = 27;
+let anne = {
+	name: 'Anne',
+	age: annesAge,
+	child: {
+		name: 'Joe',
+		age:2
+	}
+};
