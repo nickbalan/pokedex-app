@@ -63,3 +63,13 @@ let anne = {
 		age:2
 	}
 };
+
+/* Adds Square Brackets with Objects */
+let currentUserName = 'sam';
+let userAges = {
+	anne: 27,
+	sam: 112,
+	megan: 97
+};
+
+userAges[currentUserName] = 113;
