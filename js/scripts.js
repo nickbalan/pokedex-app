@@ -46,3 +46,9 @@ This is my first message here.
 My name is: ${name},
 and I'm ${age}.`;
 document.write(message+addSpace);
+
+/* Adds object car */
+let car = {
+	color: 'red',
+	mileage: 10
+};
