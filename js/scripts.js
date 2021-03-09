@@ -73,3 +73,33 @@ let userAges = {
 };
 
 userAges[currentUserName] = 113;
+
+
+/* Adds an array of 4 objects */
+let pokemonList = [
+	{
+		name: 'Bulbasaur', 
+		height: 0.7, 
+		types: 'Grass',
+		weight: 6.9
+	},
+	{
+		name: 'Squirtle',
+		height: 0.5,
+		types: 'Water 1',
+		weight: 9.0
+	},
+	{
+		name: 'Charmander',
+		height: 0.6,
+		types: 'Dragon',
+		weight: 8.5
+	},
+	{
+		name: 'Pidgeotto',
+		height: 1.1,
+		types: 'Flying',
+		weight: 30
+	}
+];
+
