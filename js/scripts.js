@@ -75,7 +75,7 @@ let userAges = {
 userAges[currentUserName] = 113;
 
 
-/* Adds an array of 4 objects */
+/* Adds an array of 4 objects, which contains a list of Pokemons */
 let pokemonList = [
 	{
 		name: 'Bulbasaur', 
