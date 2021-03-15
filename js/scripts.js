@@ -125,7 +125,7 @@ for (let i = 0; i < ages.length; i++) {
 	document.write(ages[i] - 2 + add2Space)
 };
 
-/*  */
+/* Adds a loop that identifies and prints on DOM the maturity of people by ages (child, teenager, adult) */
 let person = [
 	{name: 'person1', age: 16},
 	{name: 'person2', age: 10},
@@ -138,6 +138,12 @@ for (let i = 0; i < person.length; i++) {
 	} else if (person[i].age < 13) {
 		document.write(person[i].name + ' is a child' + addSpace);
 	} else {
-		document.write(person[i].name + ' is an adult' + addSpace);
+		document.write(person[i].name + ' is an adult' + add2Space);
 	}
 };
+
+
+/* Adds a loop that prints the name and the height of each Pokemon from pokemnList */
+for (let i = 0; i < pokemonList.length; i++) {
+	document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + addSpace);
+}
