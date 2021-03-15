@@ -119,8 +119,25 @@ for (let i = 0; i <= 31; i++) {
 	document.write(i+addSpace);
 };
 
-/* Adds a loop that prints an array of ages */
+/* Adds a loop that prints an array of ages minus 2 years for each age */
 let ages = [20, 30, 21, 31, 35];
 for (let i = 0; i < ages.length; i++) {
 	document.write(ages[i] - 2 + add2Space)
-}
+};
+
+/*  */
+let person = [
+	{name: 'person1', age: 16},
+	{name: 'person2', age: 10},
+	{name: 'person3', age: 25}
+];
+
+for (let i = 0; i < person.length; i++) {
+	if (person[i].age < 19 && person[i].age > 13) {
+		document.write(person[i].name + ' is a teenager' + addSpace);
+	} else if (person[i].age < 13) {
+		document.write(person[i].name + ' is a child' + addSpace);
+	} else {
+		document.write(person[i].name + ' is an adult' + addSpace);
+	}
+};
