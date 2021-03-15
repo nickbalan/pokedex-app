@@ -103,3 +103,12 @@ let pokemonList = [
 	}
 ];
 
+/* Adds my age with conditional if*/
+let myAge = 31;
+if (myAge === 30) {
+	document.write('You are 30 years old!');
+} else if (myAge === 31) {
+	document.write('You are 31 years old!');
+} else {
+	document.write('You are neither 30 nor 31 years old.');
+};
