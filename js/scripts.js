@@ -4,6 +4,7 @@ alert('Hello world');
 
 // Add some space between the variables
 let addSpace = '<br>';
+let add2Space = '<br><br>';
 
 // Add two numbers together
 let simpleAddition = 2 + 2;
@@ -113,7 +114,13 @@ if (myAge === 30) {
 	document.write('You are neither 30 nor 31 years old.'+addSpace);
 };
 
-/* Adds a loop that prints every number from 0 to 31 */
+/* Adds a loop that prints every number from 0 to 31*/
 for (let i = 0; i <= 31; i++) {
 	document.write(i+addSpace);
+};
+
+/* Adds a loop that prints an array of ages */
+let ages = [20, 30, 21, 31, 35];
+for (let i = 0; i < ages.length; i++) {
+	document.write(ages[i] - 2 + add2Space)
 }
