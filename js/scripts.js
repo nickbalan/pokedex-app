@@ -112,3 +112,8 @@ if (myAge === 30) {
 } else {
 	document.write('You are neither 30 nor 31 years old.'+addSpace);
 };
+
+/* Adds a loop that prints every number from 0 to 31 */
+for (let i = 0; i <= 31; i++) {
+	document.write(i+addSpace);
+}
