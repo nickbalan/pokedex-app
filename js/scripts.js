@@ -104,6 +104,9 @@ let pokemonList = [
 	}
 ];
 
+/* Adds some space between prints */
+document.write(addSpace);
+
 /* Adds my age with conditional if*/
 let myAge = 31;
 if (myAge === 30) {
@@ -119,11 +122,17 @@ for (let i = 0; i <= 31; i++) {
 	document.write(i+addSpace);
 };
 
+/* Adds some space between prints */
+document.write(addSpace);
+
 /* Adds a loop that prints an array of ages minus 2 years for each age */
 let ages = [20, 30, 21, 31, 35];
 for (let i = 0; i < ages.length; i++) {
-	document.write(ages[i] - 2 + add2Space)
+	document.write(ages[i] - 2 + addSpace)
 };
+
+/* Adds some space between prints */
+document.write(addSpace);
 
 /* Adds a loop that identifies and prints on DOM the maturity of people by ages (child, teenager, adult) */
 let person = [
@@ -138,10 +147,12 @@ for (let i = 0; i < person.length; i++) {
 	} else if (person[i].age < 13) {
 		document.write(person[i].name + ' is a child' + addSpace);
 	} else {
-		document.write(person[i].name + ' is an adult' + add2Space);
+		document.write(person[i].name + ' is an adult' + addSpace);
 	}
 };
 
+/* Adds some space between prints */
+document.write(addSpace);
 
 /* Adds a loop that prints the name and the height of each Pokemon from pokemnList */
 for (let i = 0; i < pokemonList.length; i++) {
