@@ -147,3 +147,17 @@ for (let i = 0; i < person.length; i++) {
 for (let i = 0; i < pokemonList.length; i++) {
 	document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + addSpace);
 }
+
+/* Adds some space between prints */
+document.write(addSpace);
+
+/* Adds a loop that identifies and prints on DOM what height category each Pokemon has */
+for (let i = 0; i < pokemonList.length; i++) {
+	if (pokemonList[i].height < 0.6) {
+		document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + ' - This is a small Pokemon!' + addSpace);
+	} else if (pokemonList[i].height < 5.0 && pokemonList[i].height > 1.0) {
+		document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + ' - Wow, this is a big Pokemon!' + addSpace);
+	} else {
+		document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + ' - This is a medium-size Pokemon' + addSpace);
+	}
+};
