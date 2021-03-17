@@ -7,11 +7,11 @@ let addSpace = '<br>';
 let add2Space = '<br><br>';
 
 // Functions that add space between prints 
-function addS (){
+function addsSpace (){
 	document.write('<br>');
 };
 
-function add2S (){
+function adds2Space (){
 	document.write('<br><br>');
 };
 
