@@ -113,8 +113,8 @@ let pokemonList = [
 	}
 ];
 
-/* Adds some space between prints using function addsSpace */
-addsSpace();
+/* Adds some space between prints */
+document.write(addSpace);
 
 /* Adds my age with conditional if*/
 let myAge = 31;
@@ -131,8 +131,8 @@ for (let i = 0; i <= 31; i++) {
 	document.write(i+add2Space);
 };
 
-/* Adds some space between prints using function addsSpace */
-addsSpace();
+/* Adds some space between prints */
+document.write(addSpace);
 
 /* Adds a loop that prints an array of ages minus 2 years for each age */
 let ages = [20, 30, 21, 31, 35];
@@ -140,8 +140,8 @@ for (let i = 0; i < ages.length; i++) {
 	document.write(ages[i] - 2 + addSpace)
 };
 
-/* Adds some space between prints using function addsSpace */
-addsSpace();
+/* Adds some space between prints */
+document.write(addSpace);
 
 /* Adds a loop that identifies and prints on DOM the maturity of people by ages (child, teenager, adult) */
 let person = [
@@ -160,16 +160,16 @@ for (let i = 0; i < person.length; i++) {
 	}
 };
 
-/* Adds some space between prints using function addsSpace */
-addsSpace();
+/* Adds some space between prints */
+document.write(addSpace);
 
 /* Adds a loop that prints the name and the height of each Pokemon from pokemnList */
 for (let i = 0; i < pokemonList.length; i++) {
 	document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + addSpace);
 }
 
-/* Adds some space between prints using function adds2Space */
-adds2Space();
+/* Adds some space between prints */
+document.write(addSpace);
 
 /* Adds a loop that identifies and prints on DOM what height category each Pokemon has */
 for (let i = 0; i < pokemonList.length; i++) {
