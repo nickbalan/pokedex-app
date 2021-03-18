@@ -190,5 +190,17 @@ let add = function sum(x, y) {
 	return x + y;
 };
 
-let result1 = add(100,200);
+let result1 = add(100, 200);
 document.write(result1);
+
+/* Adds some space between prints using function addsSpace */
+addsSpace();
+
+/* Adds a anonymous function that subtract numbers */
+let subtract = function (x, y) {
+	return x - y;
+};
+
+let result2 = subtract(200, 100);
+document.write(result2);
+
