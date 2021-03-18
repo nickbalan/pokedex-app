@@ -204,3 +204,14 @@ let subtract = function (x, y) {
 let result2 = subtract(200, 100);
 document.write(result2);
 
+/* Adds some space between prints using function addsSpace */
+addsSpace();
+
+/* Adds a callback function that multiplies a parameter with the results (result2) of the last subtraction*/
+function multiply(param) {
+	return param * result2; 
+};
+
+document.write(multiply(add(101, 99)));
+
+
