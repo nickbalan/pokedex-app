@@ -181,3 +181,14 @@ for (let i = 0; i < pokemonList.length; i++) {
 		document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + ' - This is a medium-size Pokemon' + addSpace);
 	}
 };
+
+/* Adds some space between prints using function addsSpace */
+addsSpace();
+
+/* Adds a function expression that sum numbers */
+let add = function sum(x, y) {
+	return x + y;
+};
+
+let result1 = add(100,200);
+document.write(result1);
