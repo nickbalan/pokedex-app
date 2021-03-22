@@ -166,7 +166,15 @@ addsSpace();
 /* Adds a loop that prints the name and the height of each Pokemon from pokemnList */
 for (let i = 0; i < pokemonList.length; i++) {
 	document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + addSpace);
-}
+};
+
+/* Adds some space between prints using function addsSpace */
+adds2Space();
+
+/* Use a forEach function instead of the for loop to iterate over the Pokémons in pokemonList array in order to print the details of each one */
+pokemonList.forEach(function(pokemon) {
+  document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + ' (types: ' + pokemon.types + ')' + ' (weight: ' + pokemon.weight + ')' + addSpace);
+});
 
 /* Adds some space between prints using function adds2Space */
 adds2Space();
