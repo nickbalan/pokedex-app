@@ -171,7 +171,7 @@ for (let i = 0; i < pokemonList.length; i++) {
 /* Adds some space between prints using function addsSpace */
 adds2Space();
 
-/* Use a forEach function instead of the for loop to iterate over the Pokémons in pokemonList array in order to print the details of each one */
+/* Use a forEach function instead of the for loop to iterate over the Pokemons in pokemonList array in order to print the details of each one */
 pokemonList.forEach(function(pokemon) {
   document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + ' (types: ' + pokemon.types + ')' + ' (weight: ' + pokemon.weight + ')' + addSpace);
 });
