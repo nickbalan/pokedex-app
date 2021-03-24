@@ -136,6 +136,9 @@ let pokemonRepository = (function() {
 pokemonRepository.add({name: 'Pikachu', height: 2.6, types: ['Electric'], weight: 5.9})
 console.log(pokemonRepository.getAll());
 
+/* Assigns the result of the getAll (IIFE) function to a global variable */
+let pokemonListOut = pokemonRepository.getAll();
+
 /* Adds some space between prints using function addsSpace */
 addsSpace();
 
