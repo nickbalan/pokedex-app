@@ -85,33 +85,52 @@ let userAges = {
 userAges[currentUserName] = 113;
 
 
-/* Adds an array of 4 objects, which contains a list of Pokemons */
-let pokemonList = [
-	{
-		name: 'Bulbasaur', 
-		height: 0.7, 
-		types: 'Grass',
-		weight: 6.9
-	},
-	{
-		name: 'Squirtle',
-		height: 0.5,
-		types: 'Water 1',
-		weight: 9.0
-	},
-	{
-		name: 'Charmander',
-		height: 0.6,
-		types: 'Dragon',
-		weight: 8.5
-	},
-	{
-		name: 'Pidgeotto',
-		height: 1.1,
-		types: 'Flying',
-		weight: 30
+/* Wraps the pokemonList array in IIFE. Adds a new variable to hold what IIFE will retun and assign the IIFE to that variable */
+let pokemonRepository = (function() {
+	/* Adds an array of 4 Pokemons (objects), which contains a list of Pokemons */
+	let pokemonList = [
+		{
+			name: 'Bulbasaur', 
+			height: 0.7, 
+			types: ['Grass', 'Poison'],
+			weight: 6.9
+		},
+		{
+			name: 'Squirtle',
+			height: 0.5,
+			types: ['Water'],
+			weight: 9.0
+		},
+		{
+			name: 'Charmander',
+			height: 0.6,
+			types: ['Fire'],
+			weight: 8.5
+		},
+		{
+			name: 'Pidgeotto',
+			height: 1.1,
+			types: ['Normal', 'Flying'],
+			weight: 29
+		}
+	];
+
+	/* This function adds new single item to the pokemonList array */
+	function add(pokemon) {
+		pokemonList.push(pokemon);
 	}
-];
+
+	/* This function returns the pokemonList array */
+	function getAll() {
+		return pokemonList;
+	}
+
+	/* This defines the function using the function keyword */
+	return {
+		add: add,
+		getAll: getAll
+	};
+})();
 
 /* Adds some space between prints using function addsSpace */
 addsSpace();
