@@ -132,6 +132,10 @@ let pokemonRepository = (function() {
 	};
 })();
 
+/* Adds a new Pokemon (object) to the pokemonList array using the add (IIFE) function */
+pokemonRepository.add({name: 'Pikachu', height: 2.6, types: ['Electric'], weight: 5.9})
+console.log(pokemonRepository.getAll());
+
 /* Adds some space between prints using function addsSpace */
 addsSpace();
 
