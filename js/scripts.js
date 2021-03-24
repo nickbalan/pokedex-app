@@ -147,6 +147,20 @@ pokemonListOut.forEach(function(pokemon) {
 	document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + ' (types: ' + pokemon.types + ')' + ' (weight: ' + pokemon.weight + ')' + addSpace);
 });
 
+/* Adds some space between prints using function adds2Space */
+adds2Space();
+
+/* Adds a for loop that identifies and prints on DOM what height category each Pokemon has */
+for (let i = 0; i < pokemonListOut.length; i++) {
+	if (pokemonListOut[i].height < 0.6) {
+		document.write(pokemonListOut[i].name + ' (height: ' + pokemonListOut[i].height + ')' + ' - This is a small Pokemon!' + addSpace);
+	} else if (pokemonListOut[i].height < 5.0 && pokemonListOut[i].height > 1.0) {
+		document.write(pokemonListOut[i].name + ' (height: ' + pokemonListOut[i].height + ')' + ' - Wow, this is a big Pokemon!' + addSpace);
+	} else {
+		document.write(pokemonListOut[i].name + ' (height: ' + pokemonListOut[i].height + ')' + ' - This is a medium-size Pokemon' + addSpace);
+	}
+};
+
 /* Adds some space between prints using function addsSpace */
 addsSpace();
 
@@ -191,28 +205,6 @@ for (let i = 0; i < person.length; i++) {
 		document.write(person[i].name + ' is a child' + addSpace);
 	} else {
 		document.write(person[i].name + ' is an adult' + addSpace);
-	}
-};
-
-/* Adds some space between prints using function addsSpace */
-addsSpace();
-
-/* Adds a loop that prints the name and the height of each Pokemon from pokemnList */
-for (let i = 0; i < pokemonList.length; i++) {
-	document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + addSpace);
-};
-
-/* Adds some space between prints using function adds2Space */
-adds2Space();
-
-/* Adds a for loop that identifies and prints on DOM what height category each Pokemon has */
-for (let i = 0; i < pokemonList.length; i++) {
-	if (pokemonList[i].height < 0.6) {
-		document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + ' - This is a small Pokemon!' + addSpace);
-	} else if (pokemonList[i].height < 5.0 && pokemonList[i].height > 1.0) {
-		document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + ' - Wow, this is a big Pokemon!' + addSpace);
-	} else {
-		document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + ' - This is a medium-size Pokemon' + addSpace);
 	}
 };
 
