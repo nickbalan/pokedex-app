@@ -142,6 +142,14 @@ let pokemonListOut = pokemonRepository.getAll();
 /* Adds some space between prints using function addsSpace */
 addsSpace();
 
+/* Adds a forEach function instead of using the for loop to iterate over the Pokemons in pokemonList array in order to print the details of each one*/
+pokemonListOut.forEach(function(pokemon) {
+	document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + ' (types: ' + pokemon.types + ')' + ' (weight: ' + pokemon.weight + ')' + addSpace);
+});
+
+/* Adds some space between prints using function addsSpace */
+addsSpace();
+
 /* Adds my age with conditional if*/
 let myAge = 31;
 if (myAge === 30) {
@@ -194,18 +202,10 @@ for (let i = 0; i < pokemonList.length; i++) {
 	document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + addSpace);
 };
 
-/* Adds some space between prints using function addsSpace */
-adds2Space();
-
-/* Use a forEach function instead of the for loop to iterate over the Pokemons in pokemonList array in order to print the details of each one */
-pokemonList.forEach(function(pokemon) {
-  document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + ' (types: ' + pokemon.types + ')' + ' (weight: ' + pokemon.weight + ')' + addSpace);
-});
-
 /* Adds some space between prints using function adds2Space */
 adds2Space();
 
-/* Adds a loop that identifies and prints on DOM what height category each Pokemon has */
+/* Adds a for loop that identifies and prints on DOM what height category each Pokemon has */
 for (let i = 0; i < pokemonList.length; i++) {
 	if (pokemonList[i].height < 0.6) {
 		document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + ' - This is a small Pokemon!' + addSpace);
