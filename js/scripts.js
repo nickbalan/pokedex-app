@@ -65,8 +65,9 @@ console.log(pokemonRepository.getAll());
 /* Adds some space between prints using function addsSpace */
 addsSpace();
 
-/* Adds a forEach function instead of using the for loop to iterate over the Pokemons in pokemonList array in order to print the details of each one*/
-pokemonListOut.forEach(function(pokemon) {
+/* Using forEach function instead of using the for loop to iterate over the Pokemons in pokemonList array in order to print the details of each one*/
+/* Chains the forEach function at getALL (IIFE) function */
+pokemonRepository.getAll().forEach(function(pokemon) {
 	document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + ' (types: ' + pokemon.types + ')' + ' (weight: ' + pokemon.weight + ')' + addSpace);
 });
 
