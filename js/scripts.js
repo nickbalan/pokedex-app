@@ -75,13 +75,14 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 adds2Space();
 
 /* Adds a for loop that identifies and prints on DOM what height category each Pokemon has */
-for (let i = 0; i < pokemonListOut.length; i++) {
-	if (pokemonListOut[i].height < 0.6) {
-		document.write(pokemonListOut[i].name + ' (height: ' + pokemonListOut[i].height + ')' + ' - This is a small Pokemon!' + addSpace);
-	} else if (pokemonListOut[i].height < 5.0 && pokemonListOut[i].height > 1.0) {
-		document.write(pokemonListOut[i].name + ' (height: ' + pokemonListOut[i].height + ')' + ' - Wow, this is a big Pokemon!' + addSpace);
+/* Chains the for loop at getALL (IIFE) function */
+for (let i = 0; i < pokemonRepository.getAll().length; i++) {
+	if (pokemonRepository.getAll()[i].height < 0.6) {
+		document.write(pokemonRepository.getAll()[i].name + ' (height: ' + pokemonRepository.getAll()[i].height + ')' + ' - This is a small Pokemon.' + addSpace);
+	} else if (pokemonRepository.getAll()[i].height < 5.0 && pokemonRepository.getAll()[i].height > 2.0) {
+		document.write(pokemonRepository.getAll()[i].name + ' (height: ' + pokemonRepository.getAll()[i].height + ')' + ' - Wow, this is a big Pokemon!' + addSpace);
 	} else {
-		document.write(pokemonListOut[i].name + ' (height: ' + pokemonListOut[i].height + ')' + ' - This is a medium-size Pokemon' + addSpace);
+		document.write(pokemonRepository.getAll()[i].name + ' (height: ' + pokemonRepository.getAll()[i].height + ')' + ' - This is a medium-size Pokemon.' + addSpace);
 	}
 };
 
