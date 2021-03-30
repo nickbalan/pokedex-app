@@ -101,8 +101,9 @@ addsSpace();
 
 /* Using forEach function instead of using the for loop to iterate over the Pokemons in pokemonList array in order to print the details of each one*/
 /* Chains the forEach function at getALL (IIFE) function */
+/*Use the addListItem function inside your forEach() loop to create a button for each Pokémon in the array */
 pokemonRepository.getAll().forEach(function(pokemon) {
-	document.write(pokemon.name + ' (height: ' + pokemon.height + ')' + ' (types: ' + pokemon.types + ')' + ' (weight: ' + pokemon.weight + ')' + addSpace);
+	pokemonRepository.addListItem(pokemon);
 });
 
 /* Adds some space between prints using function adds2Space */
