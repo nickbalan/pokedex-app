@@ -106,21 +106,5 @@ pokemonRepository.getAll().forEach(function(pokemon) {
 	pokemonRepository.addListItem(pokemon);
 });
 
-/* Adds some space between prints using function adds2Space */
-adds2Space();
-
-/* Adds a for loop that identifies and prints on DOM what height category each Pokemon has */
-/* Chains the for loop at getALL (IIFE) function */
-for (let i = 0; i < pokemonRepository.getAll().length; i++) {
-	if (pokemonRepository.getAll()[i].height < 0.6) {
-		document.write(pokemonRepository.getAll()[i].name + ' (height: ' + pokemonRepository.getAll()[i].height + ')' + ' - This is a small Pokemon.' + addSpace);
-	} else if (pokemonRepository.getAll()[i].height < 5.0 && pokemonRepository.getAll()[i].height > 2.0) {
-		document.write(pokemonRepository.getAll()[i].name + ' (height: ' + pokemonRepository.getAll()[i].height + ')' + ' - Wow, this is a big Pokemon!' + addSpace);
-	} else {
-		document.write(pokemonRepository.getAll()[i].name + ' (height: ' + pokemonRepository.getAll()[i].height + ')' + ' - This is a medium-size Pokemon.' + addSpace);
-	}
-};
-
-/* Adds some space between prints using function adds2Space */
+/* Adds some space between prints using function addsSpace */
 addsSpace();
-
