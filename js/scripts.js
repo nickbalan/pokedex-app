@@ -73,10 +73,11 @@ let pokemonRepository = (function() {
 		pokemonList.appendChild(listPokemon);
 	};
 
-	/* This defines the function using the function keyword */
+	/* Defines the keywords for the function that are used for execution outside of IIFE */
 	return {
 		add: add,
-		getAll: getAll
+		getAll: getAll,
+		addListItem: addListItem,
 	};
 })();
 
