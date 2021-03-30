@@ -60,11 +60,14 @@ let pokemonRepository = (function() {
 		return pokemonList;
 	};
 
-	/* Creates lists and buttons in the DOM with all Pokemons from the pokemonList array */
+	/* Creates lists and buttons in the DOM with all objects from pokemonList array */
 	function addListItem(pokemon) {
 		let pokemonList = document.querySelector('.pokemon-list');
 		let listPokemon = document.createElement('li');
 		let button = document.createElement('button');
+		/* Adds the names of the objects from pokemonList array on the buttons */
+		button.innerText = pokemon.name;
+		button.classList.add('button-class');
 	};
 
 	/* This defines the function using the function keyword */
