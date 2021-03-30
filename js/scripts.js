@@ -58,7 +58,14 @@ let pokemonRepository = (function() {
 	/* This function returns the pokemonList array */
 	function getAll() {
 		return pokemonList;
-	}
+	};
+
+	/* Creates lists and buttons in the DOM with all Pokemons from the pokemonList array */
+	function addListItem(pokemon) {
+		let pokemonList = document.querySelector('.pokemon-list');
+		let listPokemon = document.createElement('li');
+		let button = document.createElement('button');
+	};
 
 	/* This defines the function using the function keyword */
 	return {
