@@ -43,8 +43,17 @@ let pokemonRepository = (function() {
 
 	/* This function adds new single item to the pokemonList array */
 	function add(pokemon) {
-		pokemonList.push(pokemon);
-	}
+		if (
+			typeof pokemon === 'object' && 
+			'name' in pokemon && 
+			'height' in pokemon && 
+			'types' in pokemon
+		) {
+			pokemonList.push(pokemon);
+		} else {
+			console.log('pokemon is not correct');
+		};
+	};
 
 	/* This function returns the pokemonList array */
 	function getAll() {
