@@ -19,25 +19,25 @@ let pokemonRepository = (function() {
 			name: 'Bulbasaur', 
 			height: 0.7, 
 			types: ['Grass', 'Poison'],
-			weight: 6.9
+			weight: 6.9,
 		},
 		{
 			name: 'Squirtle',
 			height: 0.5,
 			types: ['Water'],
-			weight: 9.0
+			weight: 9.0,
 		},
 		{
 			name: 'Charmander',
 			height: 0.6,
 			types: ['Fire'],
-			weight: 8.5
+			weight: 8.5,
 		},
 		{
 			name: 'Pidgeotto',
 			height: 1.1,
 			types: ['Normal', 'Flying'],
-			weight: 29
+			weight: 29,
 		}
 	];
 
