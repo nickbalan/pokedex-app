@@ -74,12 +74,7 @@ let pokemonRepository = (function() {
 	};
 
 	/* Runs a console.log on the Pokemon objects to show details */
-	/* Adds an event listener to the button created in addListItem function */
 	function showDetails(pokemon) {
-		button.addEventListener('click', function (event) {
-			let target = event.target;
-			target.classList.toggle('button-class');
-		});
 		console.log(pokemon);
 	};
 
