@@ -1,16 +1,3 @@
-// Add some space between the variables
-let addSpace = '<br>';
-let add2Space = '<br><br>';
-
-// Functions that add space between prints 
-function addsSpace (){
-	document.write('<br>');
-};
-
-function adds2Space (){
-	document.write('<br><br>');
-};
-
 /* Wraps the pokemonList array in IIFE. Adds a new variable to hold what IIFE will retun and assign the IIFE to that variable */
 let pokemonRepository = (function() {
 	/* Adds an array of 4 Pokemons (objects), which contains a list of Pokemons */
@@ -95,15 +82,9 @@ let pokemonRepository = (function() {
 pokemonRepository.add({name: 'Pikachu', height: 2.6, types: ['Electric'], weight: 5.9})
 console.log(pokemonRepository.getAll());
 
-/* Adds some space between prints using function addsSpace */
-addsSpace();
-
 /* Using forEach function instead of using the for loop to iterate over the Pokemons in pokemonList array in order to print the details of each one*/
 /* Chains the forEach function at getALL (IIFE) function */
 /*Use the addListItem function inside your forEach() loop to create a button for each Pokémon in the array */
 pokemonRepository.getAll().forEach(function(pokemon) {
 	pokemonRepository.addListItem(pokemon);
 });
-
-/* Adds some space between prints using function addsSpace */
-addsSpace();
