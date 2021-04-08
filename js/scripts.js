@@ -40,7 +40,7 @@ let pokemonRepository = (function() {
 	};
 
 	/* Fetches data from the API, then add each Pokémon in the fetched data to pokemonList */
-	function loadList() {
+	function loadList(item) {
 		return fetch(apiUrl).then(function(response) {
 			return response.json();
 			}).then(function(json){
