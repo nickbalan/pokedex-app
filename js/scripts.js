@@ -50,6 +50,8 @@ let pokemonRepository = (function() {
 						detailsUrl: item.url
 					};
 					add(pokemon);
+					// Shows in console all the Pokemon items which were loaded by add function
+					console.log(pokemon);
 				});
 			}).catch(function(e) {
 				console.error(e);
