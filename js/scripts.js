@@ -43,7 +43,10 @@ let pokemonRepository = (function() {
 
 	/* Runs a console.log on the Pokemon objects to show details */
 	function showDetails(pokemon) {
-		console.log(pokemon);
+		/* Executes loadDetails function (that gets the Pokemon’s details from the server) in showDetails function (that is executed when a user clicks on a Pokemon button) */
+		loadDetails(pokemon).then(function() {
+			console.log(pokemon);
+		});
 	};
 
 	/* Fetches data from the API, then add each Pokémon in the fetched data to pokemonList */
