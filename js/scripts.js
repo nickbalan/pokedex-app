@@ -1,32 +1,9 @@
 /* Wraps the pokemonList array in IIFE. Adds a new variable to hold what IIFE will retun and assign the IIFE to that variable */
 let pokemonRepository = (function() {
 	/* Adds an array of 4 Pokemons (objects), which contains a list of Pokemons */
-	let pokemonList = [
-		{
-			name: 'Bulbasaur', 
-			height: 0.7, 
-			types: ['Grass', 'Poison'],
-			weight: 6.9,
-		},
-		{
-			name: 'Squirtle',
-			height: 0.5,
-			types: ['Water'],
-			weight: 9.0,
-		},
-		{
-			name: 'Charmander',
-			height: 0.6,
-			types: ['Fire'],
-			weight: 8.5,
-		},
-		{
-			name: 'Pidgeotto',
-			height: 1.1,
-			types: ['Normal', 'Flying'],
-			weight: 29,
-		}
-	];
+	let pokemonList = [];
+	/* Loads the list of Pokemons from external link */
+	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 	/* This function adds new single item to the pokemonList array */
 	function add(pokemon) {
