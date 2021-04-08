@@ -60,7 +60,22 @@ let pokemonRepository = (function() {
 				});
 			}).catch(function(e) {
 				console.error(e);
-				})
+				});
+	};
+
+	/* Loads for each Pokemon (item) the detailed data using the detailsUrl property */
+	function loadDetails(item) {
+		let url = item.detailsUrl;
+		return fetch(url).then(function(response) {
+			return response.json();
+		}).then(function(details) {
+			// adds the details to the item
+			item.imageUrl = details.sprites.front_default;
+			item.height = details.height;
+			item.types = details.types;
+		}).catch(function(e) {
+			console.error(e);
+			});
 	};
 
 	/* Defines the keywords for the function that are used for execution outside of IIFE */
@@ -69,7 +84,8 @@ let pokemonRepository = (function() {
 		getAll: getAll,
 		addListItem: addListItem,
 		showDetails: showDetails,
-		loadList: loadList
+		loadList: loadList,
+		loadDetails: loadDetails
 	};
 })();
 
