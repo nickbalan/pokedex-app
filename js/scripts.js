@@ -46,22 +46,39 @@ let pokemonRepository = (function() {
 		console.log(pokemon);
 	};
 
+	/* Fetches data from the API, then add each Pokémon in the fetched data to pokemonList */
+	function loadList() {
+		return fetch(apiUrl).then(function(response) {
+			return response.json();
+			}).then(function(json){
+				json.results.forEach(function(item) {
+					let pokemon = {
+						name: item.name,
+						detailsUrl: item.url
+					};
+					add(pokemon);
+				});
+			}).catch(function(e) {
+				console.error(e);
+				})
+	};
+
 	/* Defines the keywords for the function that are used for execution outside of IIFE */
 	return {
 		add: add,
 		getAll: getAll,
 		addListItem: addListItem,
 		showDetails: showDetails,
+		loadList: loadList
 	};
 })();
 
 /* Adds a new Pokemon (object) to the pokemonList array using the add (IIFE) function */
 pokemonRepository.add({name: 'Pikachu', height: 2.6, types: ['Electric'], weight: 5.9})
 console.log(pokemonRepository.getAll());
-
 /* Using forEach function instead of using the for loop to iterate over the Pokemons in pokemonList array in order to print the details of each one*/
 /* Chains the forEach function at getALL (IIFE) function */
-/*Use the addListItem function inside your forEach() loop to create a button for each Pokémon in the array */
+/* Use the addListItem function inside your forEach() loop to create a button for each Pokémon in the array */
 pokemonRepository.getAll().forEach(function(pokemon) {
 	pokemonRepository.addListItem(pokemon);
 });
