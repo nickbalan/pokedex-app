@@ -2,8 +2,8 @@
 let pokemonRepository = (function() {
 	/* Adds an array of 4 Pokemons (objects), which contains a list of Pokemons */
 	let pokemonList = [];
-	/* Loads the list of Pokemons from external link */
-	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+	/* Loads the list of 10 Pokemons from an external link */
+	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=10';
 
 	/* This function adds new single item to the pokemonList array */
 	function add(pokemon) {
