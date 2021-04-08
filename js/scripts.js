@@ -74,7 +74,7 @@ let pokemonRepository = (function() {
 	/* Runs a console.log on the Pokemon objects to show details */
 	function showDetails(item) {
 		/* Executes loadDetails function (that gets the Pokemon’s details from the server) in showDetails function (that is executed when a user clicks on a Pokemon button) */
-		loadDetails(item).then(function() {
+		pokemonRepository.loadDetails(item).then(function() {
 			console.log(item);
 		});
 	};
