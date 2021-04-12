@@ -121,7 +121,11 @@ function showModal() {
     /* Adds a paragraph tag with some text */
     let contentElement = document.createElement('p');
     contentElement.innerText = text;
-
+	/* Appends the elements to the modal */
+	modal.appendChild(closeButtonElement);
+	modal.appendChild(titleElement);
+	modal.appendChild(contentElement);
+	modalContainer.appendChild(modal);
 	/* Selects the modal-container if the class is visible */
 	modalContainer.classList.add('is-visible');
 };
