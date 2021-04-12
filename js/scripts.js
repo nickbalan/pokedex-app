@@ -132,11 +132,18 @@ function showModal(title, text) {
 	modalContainer.classList.add('is-visible');
 };
 
-/* Sets the button to close  */
+/* Sets the button to close */
 function hideModal() {
 	let modalContainer = document.querySelector('#modal-container');
 	modalContainer.classList.remove('is-visible');
-}
+};
+
+/* Sets the button to close if the Escape key is pressed */
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+      hideModal();  
+    }
+});
 
 /* Adds an event listener to the showModal function, which will activate the button */
 document.querySelector('#show-modal').addEventListener('click', () => {
