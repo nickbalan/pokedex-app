@@ -134,6 +134,7 @@ function showModal(title, text) {
 
 /* Sets the button to close  */
 function hideModal() {
+	let modalContainer = document.querySelector('#modal-container');
 	modalContainer.classList.remove('is-visible');
 }
 
