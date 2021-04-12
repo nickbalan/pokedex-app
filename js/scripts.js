@@ -113,7 +113,7 @@ function showModal(title, text) {
 	/* Adds to modal container a close button and assigned a class to it */
 	let closeButtonElement = document.createElement('button');
 	closeButtonElement.classList.add('modal-close');
-	/* Adds an inner text to close button */
+	/* Adds an inner text to the close button */
     closeButtonElement.innerText = "Close";
     /* Adds an title tag */
     let titleElement = document.createElement('h1');
@@ -129,6 +129,11 @@ function showModal(title, text) {
 	/* Selects the modal-container if the class is visible */
 	modalContainer.classList.add('is-visible');
 };
+
+/* Sets the button to close  */
+function hideModal() {
+	modalContainer.classList.remove('is-visible');
+}
 
 /* Adds an event listener to the showModal function, which will activate the button */
 document.querySelector('#show-modal').addEventListener('click', () => {
