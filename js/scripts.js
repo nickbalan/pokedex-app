@@ -101,3 +101,9 @@ pokemonRepository.loadList().then(function() {
 		pokemonRepository.addListItem(pokemon);
 	});
 });
+
+/* Selects the modal-container if the class is visible */
+function showModal() {
+  let modalContainer = document.querySelector('#modal-container');
+  modalContainer.classList.add('is-visible');
+}
