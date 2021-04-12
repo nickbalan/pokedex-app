@@ -118,6 +118,10 @@ function showModal() {
     /* Adds an title tag */
     let titleElement = document.createElement('h1');
     titleElement.innerText = title;
+    /* Adds a paragraph tag with some text */
+    let contentElement = document.createElement('p');
+    contentElement.innerText = text;
+
 	/* Selects the modal-container if the class is visible */
 	modalContainer.classList.add('is-visible');
 };
