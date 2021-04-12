@@ -102,8 +102,8 @@ pokemonRepository.loadList().then(function() {
 	});
 });
 
-/* Sets showModal function for modalContainer */
-function showModal() {
+/* Sets showModal function for modalContainer with parameters title and text */
+function showModal(title, text) {
 	let modalContainer = document.querySelector('#modal-container');
 	/* Clears all existing modal content */
 	modalContainer.innerText = '';
