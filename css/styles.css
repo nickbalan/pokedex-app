@@ -44,3 +44,8 @@ body {
   display: grid;
   text-align: center;
 }
+
+/* Hides the modal-container overlay by default */
+#modal-container {
+  display: none;
+}
