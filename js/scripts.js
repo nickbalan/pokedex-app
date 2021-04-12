@@ -115,6 +115,9 @@ function showModal() {
 	closeButtonElement.classList.add('modal-close');
 	/* Adds an inner text to close button */
     closeButtonElement.innerText = "Close";
+    /* Adds an title tag */
+    let titleElement = document.createElement('h1');
+    titleElement.innerText = title;
 	/* Selects the modal-container if the class is visible */
 	modalContainer.classList.add('is-visible');
 };
