@@ -105,6 +105,8 @@ pokemonRepository.loadList().then(function() {
 /* Selects the modal-container if the class is visible */
 function showModal() {
   let modalContainer = document.querySelector('#modal-container');
+  /* Clears all existing modal content */
+  modalContainer.innerText = "";
   modalContainer.classList.add('is-visible');
 };
 
