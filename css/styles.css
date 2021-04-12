@@ -75,6 +75,7 @@ body {
 /* Sets styles for modal text */
 .modal p {
   margin-bottom: 0;
+}
 
 /* Hides the modal-container overlay by default */
 #modal-container {
