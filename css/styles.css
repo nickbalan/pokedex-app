@@ -1,3 +1,9 @@
+/* Sets font family styles for all html and body tags */
+html, 
+body {
+  font-family: Arial, sans-serif;
+}
+
 /* Sets button style */
 .button-class {
   background-color: #4caf50; /* Green */
