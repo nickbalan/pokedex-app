@@ -140,6 +140,7 @@ function hideModal() {
 
 /* Sets the button to close if the Escape key is pressed */
 window.addEventListener('keydown', (e) => {
+	let modalContainer = document.querySelector('#modal-container');
     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
       hideModal();  
     }
