@@ -106,4 +106,9 @@ pokemonRepository.loadList().then(function() {
 function showModal() {
   let modalContainer = document.querySelector('#modal-container');
   modalContainer.classList.add('is-visible');
-}
+};
+
+/* Adds an event listener to the showModal function, which will activate the button */
+document.querySelector('#show-modal').addEventListener('click', () => {
+  showModal();
+});
