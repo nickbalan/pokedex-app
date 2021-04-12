@@ -45,6 +45,37 @@ body {
   text-align: center;
 }
 
+/* Set styles for modal button */
+.modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+/* Sets styles for modal close button  */
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+}
+
+/* Sets styles for modal title */
+.modal h1 {
+  margin-top: 0;
+}
+
+/* Sets styles for modal text */
+.modal p {
+  margin-bottom: 0;
+
 /* Hides the modal-container overlay by default */
 #modal-container {
   display: none;
