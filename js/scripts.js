@@ -102,11 +102,15 @@ pokemonRepository.loadList().then(function() {
 	});
 });
 
-/* Selects the modal-container if the class is visible */
+/* Sets showModal function for modalContainer */
 function showModal() {
   let modalContainer = document.querySelector('#modal-container');
   /* Clears all existing modal content */
   modalContainer.innerText = "";
+  /* Adds to modal container a div section and assigned a class to it */
+  let modal = document.createElement("div");
+  modal.classList.add("modal");
+  /* Selects the modal-container if the class is visible */
   modalContainer.classList.add('is-visible');
 };
 
