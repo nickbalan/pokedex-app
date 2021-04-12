@@ -49,3 +49,8 @@ body {
 #modal-container {
   display: none;
 }
+
+/* Sets the modal-container only be shown if it has the is-visible class */
+#modal-container.is-visible {
+  display: block;
+}
