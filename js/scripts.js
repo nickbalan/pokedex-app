@@ -115,6 +115,8 @@ function showModal(title, text) {
 	closeButtonElement.classList.add('modal-close');
 	/* Adds an inner text to the close button */
     closeButtonElement.innerText = "Close";
+    /* Adds an event listener to the close button, which activates the hideModal function */
+	closeButtonElement.addEventListener('click', hideModal);
     /* Adds an title tag */
     let titleElement = document.createElement('h1');
     titleElement.innerText = title;
