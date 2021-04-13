@@ -113,7 +113,7 @@ let pokemonRepository = (function() {
 		modalContainer.classList.add('is-visible');
 	};
 
-	
+	/* Saves the reject function of the promise in the dialogPromiseReject variable */
 	let dialogPromiseReject; // Can be set later, by showDialog
 	/* Sets the button to close */
   	function hideModal() {
@@ -147,15 +147,16 @@ let pokemonRepository = (function() {
 	  	confirmButton.focus();
 	  	/* Returns a promise that resolves when confirmed, else rejects */
 	  	return new Promise((resolve, reject) => {
-    		cancelButton.addEventListener('click', () => {
-      			hideModal();
-      			reject();
-    		});
-    		confirmButton.addEventListener('click', () => {
-      			hideModal();
-      			resolve();
-    		})
-  		});
+	  		/* Rejects always the promise in the dialogPromiseReject no matter how the modal is closed */
+  			cancelButton.addEventListener('click', hideModal);
+  			confirmButton.addEventListener('click', () => {
+    			dialogPromiseReject = null; // Reset this
+    			hideModal();
+    			resolve();
+  				});
+  			/* This can be used to reject from other functions */
+  			dialogPromiseReject = reject;
+		});
 	};
 
 	/* Uses promise to check whether the user has confirmed or not */
