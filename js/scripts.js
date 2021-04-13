@@ -1,5 +1,8 @@
 /* Wraps the pokemonList array in IIFE. Adds a new variable to hold what IIFE will retun and assign the IIFE to that variable */
 let pokemonRepository = (function() {
+	/* Sets the modalContainer variable as global, to avoid the creation of the variable over and over again */ 
+	/* Has been deleted all the repetitions of this variable from all the code of this IIFE */
+	let modalContainer = document.querySelector('#modal-container');
 	/* Adds an array of 4 Pokemons (objects), which contains a list of Pokemons */
 	let pokemonList = [];
 	/* Loads the list of 10 Pokemons from an external link */
@@ -81,33 +84,7 @@ let pokemonRepository = (function() {
 		});
 	};
 
-	/* Defines the keywords for the function that are used for execution outside of IIFE */
-	return {
-		add: add,
-		getAll: getAll,
-		addListItem: addListItem,
-		showDetails: showDetails,
-		loadList: loadList,
-		loadDetails: loadDetails
-	};
-})();
-
-/* Fetches each Pokemon from the API using forEach loop */
-pokemonRepository.loadList().then(function() { 
-	/* Using forEach function instead of using the for loop to iterate over the Pokemons in pokemonList array in order to print the details of each one*/
-	/* Chains the forEach function at getALL (IIFE) function */
-	/* Use the addListItem function inside your forEach() loop to create a button for each Pokémon in the array */
-	pokemonRepository.getAll().forEach(function(pokemon) {
-		pokemonRepository.addListItem(pokemon);
-	});
-});
-
-/* Adds the modal container and its functions in an IIFE. Fixes also the indentations */
-let modalRepository = (function() {
-	/* Sets the modalContainer variable as global, to avoid the creation of the variable over and over again */ 
-	/* Has been deleted all the repetitions of this variable from all the code of this IIFE */
-	let modalContainer = document.querySelector('#modal-container');
-	/* Sets showModal function for modalContainer with parameters title and text */
+	/* Merges the modal container and its functions into pokemonRepository IIFE */
 	function showModal(title, text) {
 		/* Clears all existing modal content */
 		modalContainer.innerText = '';
@@ -164,4 +141,24 @@ let modalRepository = (function() {
 		/* Adding 2 parameters that update the modal title and modal content */
 		showModal('Modal title', 'This is the modal content!');
 	});
+
+	/* Defines the keywords for the function that are used for execution outside of IIFE */
+	return {
+		add: add,
+		getAll: getAll,
+		addListItem: addListItem,
+		showDetails: showDetails,
+		loadList: loadList,
+		loadDetails: loadDetails
+	};
 })();
+
+/* Fetches each Pokemon from the API using forEach loop */
+pokemonRepository.loadList().then(function() { 
+	/* Using forEach function instead of using the for loop to iterate over the Pokemons in pokemonList array in order to print the details of each one*/
+	/* Chains the forEach function at getALL (IIFE) function */
+	/* Use the addListItem function inside your forEach() loop to create a button for each Pokémon in the array */
+	pokemonRepository.getAll().forEach(function(pokemon) {
+		pokemonRepository.addListItem(pokemon);
+	});
+});
