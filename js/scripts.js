@@ -102,62 +102,65 @@ pokemonRepository.loadList().then(function() {
 	});
 });
 
-/* Sets showModal function for modalContainer with parameters title and text */
-function showModal(title, text) {
+/* Adds the modal container and its functions in an IIFE. Fixes also the indentations */
+let modalRepository = (function() {
+	/* Sets showModal function for modalContainer with parameters title and text */
+	function showModal(title, text) {
+		let modalContainer = document.querySelector('#modal-container');
+		/* Clears all existing modal content */
+		modalContainer.innerText = '';
+		/* Adds to modal container a div section and assigned a class to it */
+		let modal = document.createElement('div');
+		modal.classList.add('modal');
+		/* Adds to modal container a close button and assigned a class to it */
+		let closeButtonElement = document.createElement('button');
+		closeButtonElement.classList.add('modal-close');
+		/* Adds an inner text to the close button */
+	    closeButtonElement.innerText = "Close";
+	    /* Adds an event listener to the close button, which activates the hideModal function */
+		closeButtonElement.addEventListener('click', hideModal);
+	    /* Adds an title tag */
+	    let titleElement = document.createElement('h1');
+	    titleElement.innerText = title;
+	    /* Adds a paragraph tag with some text */
+	    let contentElement = document.createElement('p');
+	    contentElement.innerText = text;
+		/* Appends the elements to the modal */
+		modal.appendChild(closeButtonElement);
+		modal.appendChild(titleElement);
+		modal.appendChild(contentElement);
+		modalContainer.appendChild(modal);
+		/* Selects the modal-container if the class is visible */
+		modalContainer.classList.add('is-visible');
+	};
+
+	/* Sets the button to close */
+	function hideModal() {
+		let modalContainer = document.querySelector('#modal-container');
+		modalContainer.classList.remove('is-visible');
+	};
+
+	/* Sets the button to close if the Escape key is pressed */
+	window.addEventListener('keydown', (e) => {
+		let modalContainer = document.querySelector('#modal-container');
+	    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+	      hideModal();  
+	    }
+	});
+
+	/* Sets the button to close if user clicks directly on the overlay, outside the modal container */
 	let modalContainer = document.querySelector('#modal-container');
-	/* Clears all existing modal content */
-	modalContainer.innerText = '';
-	/* Adds to modal container a div section and assigned a class to it */
-	let modal = document.createElement('div');
-	modal.classList.add('modal');
-	/* Adds to modal container a close button and assigned a class to it */
-	let closeButtonElement = document.createElement('button');
-	closeButtonElement.classList.add('modal-close');
-	/* Adds an inner text to the close button */
-    closeButtonElement.innerText = "Close";
-    /* Adds an event listener to the close button, which activates the hideModal function */
-	closeButtonElement.addEventListener('click', hideModal);
-    /* Adds an title tag */
-    let titleElement = document.createElement('h1');
-    titleElement.innerText = title;
-    /* Adds a paragraph tag with some text */
-    let contentElement = document.createElement('p');
-    contentElement.innerText = text;
-	/* Appends the elements to the modal */
-	modal.appendChild(closeButtonElement);
-	modal.appendChild(titleElement);
-	modal.appendChild(contentElement);
-	modalContainer.appendChild(modal);
-	/* Selects the modal-container if the class is visible */
-	modalContainer.classList.add('is-visible');
-};
+	modalContainer.addEventListener('click', (e) => {
+	    // Since this is also triggered when clicking INSIDE the modal
+	    // We only want to close if the user clicks directly on the overlay
+	    let target = e.target;
+	    if (target === modalContainer) {
+	      hideModal();
+	    }
+	  });
 
-/* Sets the button to close */
-function hideModal() {
-	let modalContainer = document.querySelector('#modal-container');
-	modalContainer.classList.remove('is-visible');
-};
-
-/* Sets the button to close if the Escape key is pressed */
-window.addEventListener('keydown', (e) => {
-	let modalContainer = document.querySelector('#modal-container');
-    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-      hideModal();  
-    }
-});
-
-/* Sets the button to close if user clicks directly on the overlay, outside the modal container */
-let modalContainer = document.querySelector('#modal-container');
-modalContainer.addEventListener('click', (e) => {
-    // Since this is also triggered when clicking INSIDE the modal
-    // We only want to close if the user clicks directly on the overlay
-    let target = e.target;
-    if (target === modalContainer) {
-      hideModal();
-    }
-  });
-
-/* Adds an event listener to the showModal function, which will activate the button */
-document.querySelector('#show-modal').addEventListener('click', () => {
-  showModal();
-});
+	/* Adds an event listener to the showModal function, which will activate the button */
+	document.querySelector('#show-modal').addEventListener('click', () => {
+	  showModal();
+	});
+})();
