@@ -113,10 +113,18 @@ let pokemonRepository = (function() {
 		modalContainer.classList.add('is-visible');
 	};
 
+	
+	let dialogPromiseReject; // Can be set later, by showDialog
 	/* Sets the button to close */
-	function hideModal() {
-		modalContainer.classList.remove('is-visible');
-	};
+  	function hideModal() {
+    	let modalContainer = document.querySelector('#modal-container');
+    	modalContainer.classList.remove('is-visible');
+		/* Rejects always the dialog when the modal is closed */
+		if (dialogPromiseReject) {
+		    dialogPromiseReject();
+		    dialogPromiseReject = null;
+    	}
+  	}
 
 	/* Adds a showDialog function to create dialogs */
 	function showDialog(title, text) {
