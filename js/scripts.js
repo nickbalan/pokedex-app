@@ -135,6 +135,8 @@ let pokemonRepository = (function() {
 		/* Appends the new elements to this modal */
 	    modal.appendChild(confirmButton);
 	  	modal.appendChild(cancelButton);
+	  	/* Focuses the confirmButton so that the user can simply press Enter */
+	  	confirmButton.focus();
 	}
 
 	/* Sets the button to close if the Escape key is pressed */
