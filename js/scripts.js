@@ -161,6 +161,7 @@ let modalRepository = (function() {
 
 	/* Adds an event listener to the showModal function, which will activate the button */
 	document.querySelector('#show-modal').addEventListener('click', () => {
-	  showModal();
+		/* Adding 2 parameters that update the modal title and modal content */
+		showModal('Modal title', 'This is the modal content!');
 	});
 })();
