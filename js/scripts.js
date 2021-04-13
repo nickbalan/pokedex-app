@@ -118,6 +118,10 @@ let pokemonRepository = (function() {
 		modalContainer.classList.remove('is-visible');
 	};
 
+	/* Adds a showDialog function to create dialogs */
+	function showDialog(title, text) {
+	}
+
 	/* Sets the button to close if the Escape key is pressed */
 	window.addEventListener('keydown', (e) => {
 		let modalContainer = document.querySelector('#modal-container');
