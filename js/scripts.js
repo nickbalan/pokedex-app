@@ -137,6 +137,17 @@ let pokemonRepository = (function() {
 	  	modal.appendChild(cancelButton);
 	  	/* Focuses the confirmButton so that the user can simply press Enter */
 	  	confirmButton.focus();
+	  	/* Returns a promise that resolves when confirmed, else rejects */
+	  	return new Promise((resolve, reject) => {
+    		cancelButton.addEventListener('click', () => {
+      			hideModal();
+      			reject();
+    		});
+    		confirmButton.addEventListener('click', () => {
+      			hideModal();
+      			resolve();
+    		})
+  		});
 	};
 
 	/* Uses promise to check whether the user has confirmed or not */
