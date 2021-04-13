@@ -128,6 +128,10 @@ let pokemonRepository = (function() {
 	  	let confirmButton = document.createElement('button');
 	  	confirmButton.classList.add('modal-confirm');
 	  	confirmButton.innerText = 'Confirm';
+	  	/* Creates a 'Cancel' button, assignes it a class and adds an inner text into it */
+		let cancelButton = document.createElement('button');
+		cancelButton.classList.add('modal-cancel');
+		cancelButton.innerText = 'Cancel';
 	}
 
 	/* Sets the button to close if the Escape key is pressed */
