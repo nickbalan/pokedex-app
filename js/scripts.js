@@ -104,9 +104,11 @@ pokemonRepository.loadList().then(function() {
 
 /* Adds the modal container and its functions in an IIFE. Fixes also the indentations */
 let modalRepository = (function() {
+	/* Sets the modalContainer variable as global, to avoid the creation of the variable over and over again */ 
+	/* Has been deleted all the repetitions of this variable from all the code of this IIFE */
+	let modalContainer = document.querySelector('#modal-container');
 	/* Sets showModal function for modalContainer with parameters title and text */
 	function showModal(title, text) {
-		let modalContainer = document.querySelector('#modal-container');
 		/* Clears all existing modal content */
 		modalContainer.innerText = '';
 		/* Adds to modal container a div section and assigned a class to it */
@@ -136,7 +138,6 @@ let modalRepository = (function() {
 
 	/* Sets the button to close */
 	function hideModal() {
-		let modalContainer = document.querySelector('#modal-container');
 		modalContainer.classList.remove('is-visible');
 	};
 
@@ -149,7 +150,6 @@ let modalRepository = (function() {
 	});
 
 	/* Sets the button to close if user clicks directly on the overlay, outside the modal container */
-	let modalContainer = document.querySelector('#modal-container');
 	modalContainer.addEventListener('click', (e) => {
 	    // Since this is also triggered when clicking INSIDE the modal
 	    // We only want to close if the user clicks directly on the overlay
