@@ -120,6 +120,8 @@ let pokemonRepository = (function() {
 
 	/* Adds a showDialog function to create dialogs */
 	function showDialog(title, text) {
+		/* Calls the showModal to inherit its functions */
+		showModal(title, text);
 	}
 
 	/* Sets the button to close if the Escape key is pressed */
