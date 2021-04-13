@@ -122,6 +122,12 @@ let pokemonRepository = (function() {
 	function showDialog(title, text) {
 		/* Calls the showModal to inherit its functions */
 		showModal(title, text);
+		/* Adds a confirm and cancel button to the modal */
+	  	let modal = modalContainer.querySelector('.modal');
+	  	/* Creates a 'Confirm' button, assignes it a class and adds an inner text into it */
+	  	let confirmButton = document.createElement('button');
+	  	confirmButton.classList.add('modal-confirm');
+	  	confirmButton.innerText = 'Confirm';
 	}
 
 	/* Sets the button to close if the Escape key is pressed */
