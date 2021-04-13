@@ -137,7 +137,16 @@ let pokemonRepository = (function() {
 	  	modal.appendChild(cancelButton);
 	  	/* Focuses the confirmButton so that the user can simply press Enter */
 	  	confirmButton.focus();
-	}
+	};
+
+	/* Uses promise to check whether the user has confirmed or not */
+	document.querySelector('#show-dialog').addEventListener('click', () => {
+  		showDialog('Confirm action', 'Are you sure you want to do this?').then(function() {
+    	alert('confirmed!');
+  		}, () => {
+    	alert('not confirmed');
+  		});
+	});
 
 	/* Sets the button to close if the Escape key is pressed */
 	window.addEventListener('keydown', (e) => {
