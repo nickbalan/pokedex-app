@@ -24,7 +24,8 @@ body {
 }
 
 /* Sets styles for the div section "modal-container" */
-#modal-container {
+/* Sets the modal-container only be shown if it has the is-visible class */
+#modal-container.is-visible {
   position: fixed;
   padding: 20px;
   box-sizing: border-box;
@@ -80,9 +81,4 @@ body {
 /* Hides the modal-container overlay by default */
 #modal-container {
   display: none;
-}
-
-/* Sets the modal-container only be shown if it has the is-visible class */
-#modal-container.is-visible {
-  display: block;
 }
