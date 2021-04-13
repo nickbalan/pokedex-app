@@ -132,6 +132,9 @@ let pokemonRepository = (function() {
 		let cancelButton = document.createElement('button');
 		cancelButton.classList.add('modal-cancel');
 		cancelButton.innerText = 'Cancel';
+		/* Appends the new elements to this modal */
+	    modal.appendChild(confirmButton);
+	  	modal.appendChild(cancelButton);
 	}
 
 	/* Sets the button to close if the Escape key is pressed */
