@@ -199,7 +199,10 @@ let pokemonRepository = (function() {
 		addListItem: addListItem,
 		showDetails: showDetails,
 		loadList: loadList,
-		loadDetails: loadDetails
+		loadDetails: loadDetails,
+		showModal: showModal,
+		hideModal: hideModal,
+		showDialog: showDialog
 	};
 })();
 
