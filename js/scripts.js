@@ -6,10 +6,6 @@ let pokemonRepository = (function(){
 	/* Loads the list of 10 Pokemons from an external link */
 	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=10';
 
-	/* Sets the modalContainer variable as global, to avoid the creation of the variable over and over again */ 
-	/* Has been deleted all the repetitions of this variable from all the code of this IIFE */
-	let modalContainer = document.querySelector('#modal-container');
-
 	/* This function adds new single item to the pokemonList array */
 	function add(item) {
 		if(
@@ -45,8 +41,10 @@ let pokemonRepository = (function(){
 		/* Adds classes for the button tag */
 		button.classList.add('btn');
 		button.classList.add('btn-block');
-		button.classList.add('data-target', '#pokemonModal');
-		button.classList.add('data-toggle', 'modal');
+		//button.classList.add('data-target', '#pokemonModal');
+		//button.classList.add('data-toggle', 'modal');
+		button.setAttribute('data-target', '#pokemonModal');
+		button.setAttribute('data-toggle', 'modal');
 
 		/* Appends the button and the list to their parents */
 		listPokemon.appendChild(button);
@@ -83,8 +81,10 @@ let pokemonRepository = (function(){
 			return response.json();
 		}).then(function(details) {
 			// adds the details to the items
-			item.imageUrl = details.sprites.front_default;
+			item.imageFront = details.sprites.front_default;
+			item.imageBack = details.sprites.back_default;
 			item.height = details.height;
+			item.weight = details.weight;
 			item.types = details.types;
 		}).catch(function(e) {
 			console.error(e);
@@ -104,16 +104,29 @@ let pokemonRepository = (function(){
 			modalTitle.empty();
 			modalBody.empty();
 
-			/* Selects details about Pokemon that will be displayed. */
+			/* Selects details about Pokemon that will be displayed in Modal. */
 			let pokemonName = $('<h1>' + pokemon.name + '</h1>');
-			let pokemonImage = $('<img class="modal-img" style="width:50%">');
-			pokemonImage.attr('src', pokemon.imageUrl);
-			let pokemonHeight = $('<p>' + 'Height: ' + pokemon.height + '</p>')
+			let pokemonImageFront = $('<img class="modal-img" style="width:25%">');
+			pokemonImageFront.attr('src', pokemon.imageFront);
+			let pokemonImageBack = $('<img class="modal-img" style="width:25%">');
+			pokemonImageBack.attr('src', pokemon.imageBack);
+			let pokemonHeight = $('<p>' + 'Height: ' + pokemon.height + '</p>');
+			let pokemonWeight = $('<p>' + 'Weight: ' + pokemon.weight + '</p>');
+			//let pokemonTypes = $('<p>' + 'Types:' + '</p>');
+			let pokemonTypes = document.createElement('span');
+			let types = 'Types: ';
+      		pokemon.types.forEach(function(item) {
+        		types += item.type.name + ' ';
+      		});
+      		pokemonTypes.innerHTML = types;
 			
 			/* Appends to their parents */
 			modalTitle.append(pokemonName);
-    		modalBody.append(pokemonImage);
+    		modalBody.append(pokemonImageFront);
+    		modalBody.append(pokemonImageBack);
     		modalBody.append(pokemonHeight);
+    		modalBody.append(pokemonWeight);
+    		modalBody.append(pokemonTypes);
 		});
 	};
 	
