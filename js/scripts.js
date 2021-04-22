@@ -41,8 +41,6 @@ let pokemonRepository = (function(){
 		/* Adds classes for the button tag */
 		button.classList.add('btn');
 		button.classList.add('btn-block');
-		//button.classList.add('data-target', '#pokemonModal');
-		//button.classList.add('data-toggle', 'modal');
 		button.setAttribute('data-target', '#pokemonModal');
 		button.setAttribute('data-toggle', 'modal');
 
@@ -112,7 +110,6 @@ let pokemonRepository = (function(){
 			pokemonImageBack.attr('src', pokemon.imageBack);
 			let pokemonHeight = $('<p>' + 'Height: ' + pokemon.height + '</p>');
 			let pokemonWeight = $('<p>' + 'Weight: ' + pokemon.weight + '</p>');
-			//let pokemonTypes = $('<p>' + 'Types:' + '</p>');
 			let pokemonTypes = document.createElement('span');
 			let types = 'Types: ';
       		pokemon.types.forEach(function(item) {
