@@ -115,7 +115,7 @@ let pokemonRepository = (function(){
       		pokemon.types.forEach(function(item) {
         		types += item.type.name + ' ';
       		});
-      		pokemonTypes.innerHTML = types;
+      		pokemonTypes.innerText = types;
 			
 			/* Appends to their parents */
 			modalTitle.append(pokemonName);
