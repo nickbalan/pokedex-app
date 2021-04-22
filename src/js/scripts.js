@@ -6,6 +6,8 @@ let pokemonRepository = (function(){
 	/* Loads the list of 10 Pokemons from an external link */
 	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=10';
 
+	let searchBar = document.querySelector('#search-bar');
+
 	/* This function adds new single item to the pokemonList array */
 	function add(item) {
 		if(
@@ -126,6 +128,20 @@ let pokemonRepository = (function(){
     		modalBody.append(pokemonTypes);
 		});
 	};
+
+	/* Adds the search by name functionality for the Search Bar. */
+	searchBar.addEventListener('input', function(){
+		let pokemonList = document.querySelectorAll('.list-group-item');
+		let filterUpperCase = searchBar.value.toUpperCase();
+
+		pokemonList.forEach(function(pokemon){
+			if(pokemon.innerText.toUpperCase().indexOf(filterUpperCase) > -1){
+				pokemon.style.display = '';
+			} else {
+				pokemon.style.display = 'none';
+			}
+		});
+	});
 	
 	/* Defines the keywords for the function that are used for execution outside of IIFE */
 	return {
