@@ -4,7 +4,7 @@ let pokemonRepository = (function(){
 	let pokemonList = [];
 
 	/* Loads the list of 10 Pokemons from an external link */
-	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=10';
+	let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=100';
 
 	let searchBar = document.querySelector('#search-bar');
 
