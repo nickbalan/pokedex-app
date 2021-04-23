@@ -4,22 +4,28 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Simple JS App</title>
+	<!-- Adds the Pokemon favicon -->
+	<link rel="shortcut icon" href="img/Pokemon_icon_icons.svg" alt="Pokemon Icon" type="image/svg"/>
 	<!-- Adds a link to BootstrapCDN. Bootstrap CSS. -->
-	<!-- Inserts the link to Bootstrap before any other custom styles file -->
+	<!-- Inserts the link to BootstrapCDN before any other custom styles file -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Inserts the link to the custom styles file -->
 	<link rel="stylesheet" type="text/css" href="src/css/styles.css">
 </head>
 <body>
+	<!-- Adds the basic nav Bar -->
 	<nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">
-    	<img src="img/Pokemon_icon_icons.svg" width="30" height="30" class="d-inline-block align-top" alt="Pokemon logo">
-    	<br>
-    	POKEDEX
-    </a>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search a Pokemon" aria-label="Search" id="search-bar">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+		<!-- Adds the Pokemon Icon inside the nav Bar -->
+	    <a class="navbar-brand" href="index.html">
+	    	<img src="img/Pokemon_icon_icons.svg" width="40" height="40" class="d-inline-block align-top" alt="Pokemon logo">
+	    	<br>
+	    	POKEDEX
+	    </a>
+	    <!-- Adds the Search Bar inside the nav Bar -->
+	    <form class="form-inline">
+	        <input class="form-control mr-sm-2" type="search" placeholder="Search a Pokemon" aria-label="Search" id="search-bar">
+	        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
     </nav>
 
 	<!-- Adds the list of Pokemons using Bootstrap. -->
@@ -43,8 +49,8 @@
 	    </div>
 	  </div>
 	</div>
- 
- 	<!-- Added the personalized links to jQuery.js, Popper.js, and Bootstrap's JavaScript plugins. -->
+
+ 	<!-- Adds the personalized links to jQuery.js, Popper.js, and Bootstrap's JavaScript plugins. -->
 	<script 
 		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
