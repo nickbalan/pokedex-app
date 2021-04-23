@@ -1,4 +1,4 @@
-/* Sets font family styles for all html and body tags */
+/* Sets the styles for all html and body tags */
 html, 
 body {
 	font-size: 14px;
@@ -8,6 +8,7 @@ body {
   	text-align: center;
 }
 
+/* Sets the styles for the list of Pokemons */
 .list-group {
 	margin-top: 20px;
   	text-align: center;
