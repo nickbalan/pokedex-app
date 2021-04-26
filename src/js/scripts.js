@@ -66,8 +66,6 @@ let pokemonRepository = (function(){
 				};
 
 				add(pokemon);
-				// Shows in console all the Pokemon items which were loaded by add function
-				console.log(pokemon);
 				});
 			}).catch(function(e) {
 				console.error(e);
