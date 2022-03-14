@@ -25,3 +25,9 @@ It’s up to you to come up with a type of data you want to display, however, if
 - The app must not throw any errors when being used. 
 - The app should be deployed to a publicly accessible platform like GitHub Pages (you can review how to do this in Intro to Frontend Development's Exercise 10: Code Quality, Testing, & Web Hosting). 
 - The app must work in Chrome, Firefox, Safari, Edge, and Internet Explorer 11.
+
+## Pokédex - Simple JS App screenshots
+
+![Livescreen](/img/Livescreen/Simple_JS_App_Livescreen_1.JPG)
+![Livescreen](/img/Livescreen/Simple_JS_App_Livescreen_2.JPG)
+![Livescreen](/img/Livescreen/Simple_JS_App_Livescreen_3.JPG)
