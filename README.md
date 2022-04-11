@@ -14,7 +14,7 @@ external API
 - Where? — Potential employers, clients, and collaborators might look at the code directly from my GitHub repository or be directed to my GitHub profile from my portfolio website
 - Why? — For my potential employers, clients, and collaborators to see how I create the architecture of a JavaScript App and how I test and debug my code.
 
-## User Goals 
+## User Stories 
 - As a user, I should be able to view a list of data and see more details for a given data item on demand
 - As a user, I should be able to view a small Pokédex App that displays a list of Pokémons.
 
