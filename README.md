@@ -6,13 +6,13 @@ To build a small web application with HTML, CSS, and JavaScript that loads data 
 ## My Role
 - Full-Stack Web Developer
 
-## The 5 Ws
+## The 5 W's
 - Who? — My professional network, as well as potential employers
 - What? — A JavaScript App built with HTML, CSS, and JavaScript, which uses an
 external API
 - When? — Immediately! The code of the app is accessible  for viewing in my GitHub repository
 - Where? — Potential employers, clients, and collaborators might look at the code directly from my GitHub repository or be directed to my GitHub profile from my portfolio website
-- Why? For my potential employers, clients, and collaborators to see how I create the architecture of a JavaScript App and how I test and debug my code.
+- Why? — For my potential employers, clients, and collaborators to see how I create the architecture of a JavaScript App and how I test and debug my code.
 
 ## User Goals 
 - As a user, I should be able to view a list of data and see more details for a given data item on demand
