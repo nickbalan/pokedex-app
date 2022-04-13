@@ -1,4 +1,4 @@
-# Pokédex - Simple JS App
+# Pokédex - Simple JS App. Technical Case Study
 
 ## Objective 
 To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables viewing data points in detail. 
@@ -18,12 +18,7 @@ external API
 - As a user, I should be able to view a list of data and see more details for a given data item on demand
 - As a user, I should be able to view a small Pokédex App that displays a list of Pokémons.
 
-## Key Features 
-- Load data from an external API source 
-- View a list of items 
-- On user action (e.g., by clicking on a list item), view details for that item.
-
-## Technical Requirements
+## Technical Requirements & Solutions
 - The app must load data from an external API 
 - The app must display a list of items loaded from that API after the page is loaded 
 - The app must enable the viewing of more details for a given list item (a Pokémon) on-demand, such as when clicking on a list item 
@@ -36,6 +31,11 @@ external API
 - The app must not throw any errors when being used 
 - The app must be deployed to a publicly accessible platform like GitHub Pages
 - The app must work in Chrome, Firefox, Safari, Edge, and Internet Explorer 11.
+
+## Key Features 
+- Load data from an external API source 
+- View a list of items 
+- On user action (e.g., by clicking on a list item), view details for that item.
 
 ## Link to live hosted Pokédex - Simple JS App
 Check out the [Pokédex - Simple JS App](https://nickbalan.github.io/simple-js-app/) page.
