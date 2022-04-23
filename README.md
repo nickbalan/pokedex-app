@@ -3,6 +3,12 @@
 ## Objective 
 To build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables viewing data points in detail. 
 
+## Context
+Enter the world of JavaScript functional programming by building a simple client-side application that fetches data from an external API.
+
+## Project Owner and Acknowledgement
+CareerFoundry
+
 ## My Role
 - Full-Stack Web Developer
 
@@ -10,7 +16,7 @@ To build a small web application with HTML, CSS, and JavaScript that loads data 
 - Who? — My professional network, as well as potential employers
 - What? — A JavaScript App built with HTML, CSS, and JavaScript, which uses an
 external API
-- When? — Immediately! The code of the app is accessible  for viewing in my GitHub repository
+- When? — The code of the app is accessible  for viewing in my GitHub repository
 - Where? — Potential employers, clients, and collaborators might look at the code directly from my GitHub repository or be directed to my GitHub profile from my portfolio website
 - Why? — For my potential employers, clients, and collaborators to see how I create the architecture of a JavaScript App and how I test and debug my code.
 
