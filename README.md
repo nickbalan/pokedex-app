@@ -7,7 +7,7 @@ To build a small web application with HTML, CSS, and JavaScript that loads data 
 Enter the world of JavaScript functional programming by building a simple client-side application that fetches data from an external API.
 
 ## Project Owner and Acknowledgement
-CareerFoundry
+- CareerFoundry
 
 ## My Role
 - Full-Stack Web Developer
