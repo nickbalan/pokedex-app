@@ -6,8 +6,11 @@ To build a small web application with HTML, CSS, and JavaScript that loads data 
 ## Context
 Enter the world of JavaScript functional programming by building a simple client-side application that fetches data from an external API.
 
-## Project Owner and Acknowledgement
-- CareerFoundry
+## Project Deliverables Acknowledgement
+- CareerFoundry (25.02.2021 - 17.03.2022)
+
+## Project Improvement Strategies
+- Nick Balan (18.03.2022 - Current)
 
 ## My Role
 - Full-Stack Web Developer
