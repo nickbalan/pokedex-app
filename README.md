@@ -8,13 +8,9 @@ Build a web application with HTML, CSS, and JavaScript that loads data from an e
 
 Enter the world of JavaScript functional programming by building a simple client-side application that fetches data from an external API.
 
-## Project Deliverables Acknowledgement
+## Project Owner, Management, and Acknowledgement
 
-- CareerFoundry (25.02.2021 - 17.03.2022)
-
-## Project Improvement Strategies
-
-- Nick Balan (18.03.2022 - Current)
+[CareerFoundry](https://careerfoundry.com/) (25.02.2021 - 17.03.2022)
 
 ## My Role
 
