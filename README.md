@@ -1,4 +1,4 @@
-# JS App - Pokédex. Technical Case Study
+# Pokedex App. Technical Case Study
 
 ## Objective
 
@@ -6,7 +6,7 @@ Build a web application with HTML, CSS, and JavaScript that loads data from an e
 
 ## Context
 
-Enter the world of JavaScript functional programming by building a simple client-side application that fetches data from an external API.
+Enter the world of JavaScript functional programming by building a client-side application that fetches data from an external API.
 
 ## Project Owner, Management, and Acknowledgement
 
@@ -51,12 +51,12 @@ Enter the world of JavaScript functional programming by building a simple client
 - View a list of items
 - On user action (e.g., by clicking on a list item), view details for that item.
 
-## Link to live hosted Pokédex - Simple JS App
+## Link to live hosted Pokedex App
 
-Check out the [Pokédex - Simple JS App](https://nickbalan.github.io/simple-js-app/) page.
+Check out the [Pokedex App](https://nickbalan.github.io/pokedex-app/) page.
 
-## Pokédex - Simple JS App screenshots
+## Pokedex App screenshots
 
-![Livescreen](/img/Livescreen/Simple_JS_App_Livescreen_1.JPG)
-![Livescreen](/img/Livescreen/Simple_JS_App_Livescreen_2.JPG)
-![Livescreen](/img/Livescreen/Simple_JS_App_Livescreen_3.JPG)
+![Livescreen](/img/Livescreen/Pokedex_App_Livescreen_1.JPG)
+![Livescreen](/img/Livescreen/Pokedex_App_Livescreen_2.JPG)
+![Livescreen](/img/Livescreen/Pokedex_App_Livescreen_3.JPG)
